@@ -26,3 +26,27 @@ from django.http import HttpResponse
 def index(request):
   return HttpResponse("Hello, world. You´re at the nombreApp index.")
 ```
+
+Ahora hay que crear el fichero urls.py y dentro del mismo:
+
+```python
+from django.conf.urls import url
+
+from . import views
+
+urlpatterns = [
+    url(r'^$', views.index, name='index'),
+]
+```
+lo que mapea la vista con la url. Y en el fichero nombreApp/urls.py:
+```python
+from django.conf.urls import include, url
+from django.contrib import admin
+
+urlpatterns = [
+    url(r'^polls/', include('polls.urls')),
+    url(r'^admin/', admin.site.urls),
+
+```
+Si ejecutamos ```$ python manage.py runserver ``` y visitamos http://localhost:8000/polls/ debe aparecernos el mensaje "Hello, world. You´re at the nombreApp index."
+
