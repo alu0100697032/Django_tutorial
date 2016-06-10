@@ -5,7 +5,7 @@ Como paso previo se asume que se tiene ***python*** y ***Django*** instalados.
 ## 1. Crear un proyecto
 En el directorio donde querramos almacenar nuestro proyecto ejecutar el comando:
 ```
-$ django-admin startproyect mysite
+$ django-admin startproject mysite
 ```
 Esto creará la estructura básica del proyecto, el cual incluye un servidor que nos servirá para la fase de desarrollo. Si queremos ver que el proyecto funciona correctamente, moverse al directorio mysite y ejecutar:
 ```
